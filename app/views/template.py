@@ -8,6 +8,12 @@ class View(object):
         return render_view(self)
 
 
+class FooterSupportLinks(View):
+    organisationName = 'Land Registry'
+    organisationUrl = 'https://www.gov.uk/land-registry'
+    builtWhere = 'Croydon and Plymouth'
+
+
 class PropositionHeader(View):
 
     def __init__(self, serviceName):
@@ -31,6 +37,9 @@ class Template (object):
     assetPath = '/template/assets/'
     serviceName = 'Service Name'
     headerClass = 'with-proposition'
+
+    def footerSupportLinks(self):
+        return FooterSupportLinks().render()
 
     def cookieMessage(self):
         return CookieMessage().render()
