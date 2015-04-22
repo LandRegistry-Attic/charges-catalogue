@@ -11,6 +11,6 @@ def create_app():
     manager = Manager(app)
 
     app.register_blueprint(helloworld.blueprint)
-    app.register_blueprint(assets.govuk_template)
+    app.register_blueprint(assets.govuk_template, url_prefix='/template')
 
     return app, manager

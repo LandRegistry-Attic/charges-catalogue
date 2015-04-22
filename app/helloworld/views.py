@@ -1,5 +1,5 @@
-from app.template import Template
+from app.views.template import Template
 
 
 class Hello(Template):
-    title = "Rimmers exam"
+    pageTitle = "Hello, World!"
