@@ -3,5 +3,7 @@ from govuk_template.flask.mustache import GovukTemplate
 
 
 class Template (object):
-    def render (self):
-        return GovukTemplate().render(content=render_view(self))
+    assetPath = '/assets/'
+
+    def render(self):
+        return GovukTemplate().render(self, content=render_view(self))

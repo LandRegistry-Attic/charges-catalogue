@@ -18,3 +18,14 @@ class TestHelloWorld (unittest.TestCase):
 
         header = ''.join(html.xpath('//header//a/text()'))
         self.assertTrue('GOV.UK' in header)
+
+    @with_context
+    @with_client
+    def test_assets_path_correct(self, client):
+        res = client.get('/helloworld')
+        html = document_fromstring(res.get_data())
+
+        self.assertEqual(res.status_code, 200)
+        assetPaths = html.xpath('//link/@href')
+        for path in assetPaths:
+            self.assertTrue('/assets/' in path)
