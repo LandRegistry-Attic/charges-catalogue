@@ -1,3 +1,4 @@
 test: python tests.py
 run: python run.py runserver
 install: pip install -r requirements.txt
+shell: export PATH=$1; python tests.py;

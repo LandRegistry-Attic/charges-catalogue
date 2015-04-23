@@ -3,3 +3,5 @@ Flask
 flask-stache
 lxml
 Flask-Script
+libsass
+Flask-Assets
