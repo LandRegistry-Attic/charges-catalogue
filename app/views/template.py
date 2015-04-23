@@ -1,5 +1,6 @@
 from flask_stache import render_view
 from govuk_template.flask.mustache import GovukTemplate
+from app.static import urls
 
 
 class View(object):
@@ -24,6 +25,11 @@ class CookieMessage(View):
     pass
 
 
+class Head(View):
+    def assets(self):
+        return urls()
+
+
 class Base(View):
 
     def __init__(self, view):
@@ -46,6 +52,9 @@ class Template (object):
 
     def propositionHeader(self):
         return PropositionHeader(self.serviceName).render()
+
+    def head(self):
+        return Head().render()
 
     def render(self):
         return GovukTemplate().render(
