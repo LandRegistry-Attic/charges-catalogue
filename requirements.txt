@@ -5,4 +5,4 @@ lxml
 Flask-Script
 libsass
 Flask-Assets
-govuk_template
+govuk-template
