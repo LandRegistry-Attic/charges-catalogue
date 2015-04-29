@@ -28,5 +28,4 @@ class TestHelloWorld (unittest.TestCase):
         self.assertEqual(res.status_code, 200)
         assetPaths = html.xpath('//link/@href')
         for path in assetPaths:
-            print(path)
-            self.assertTrue('/assets/' in path)
+            self.assertTrue('/assets/', 'static' in path)
