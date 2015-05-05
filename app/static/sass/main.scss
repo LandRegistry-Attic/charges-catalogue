@@ -1,5 +1,5 @@
-$red: #cc0000;
+@import '_grid_layout.scss';
 
-body {
-  color: $red !important;
+main {
+  @extend %site-width-container;
 }

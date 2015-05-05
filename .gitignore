@@ -1,3 +1,5 @@
 __pycache__
 /app/static/gen/
 .webassets-cache
+*.pyc
+.DS_Store
