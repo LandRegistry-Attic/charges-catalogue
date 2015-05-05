@@ -12,10 +12,10 @@ class TestStaticAssets(unittest.TestCase):
     @with_context
     def test_url(self):
         assetsUrls = urls()
-        self.assertTrue('main' in assetsUrls)
+        self.assertIn('main', assetsUrls)
 
         main = assetsUrls['main']
-        self.assertTrue('/static/gen/main.css' in main)
+        self.assertIn('/static/gen/main.css', main)
 
     @with_context
     def test_dynamic_adding_bundle(self):
@@ -24,7 +24,7 @@ class TestStaticAssets(unittest.TestCase):
         assets.register('custom', customBundle)
 
         assetsUrls = urls()
-        self.assertTrue('foo' in assetsUrls)
+        self.assertIn('foo', assetsUrls)
 
     def test_strip_name_from_url(self):
         self.assertEqual('main', _strip_name('main.css'))
