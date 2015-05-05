@@ -1,5 +1,5 @@
-@import '_colours.scss';
+@import '_grid_layout.scss';
 
-body {
-  color: $attorney-generals-office !important;
+main {
+  @extend %site-width-container;
 }
