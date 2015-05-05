@@ -1,4 +1,5 @@
 colour-runner
+xmlrunner
 Flask
 flask-stache
 lxml
