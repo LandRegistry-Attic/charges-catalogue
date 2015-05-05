@@ -7,7 +7,7 @@ virtualenv $env_dir
 . $env_dir/bin/activate
 
 #install requirements
-pip install -r requirements
+pip install -r requirements.txt
 
 #ensure submodules are cloned
 git submodule update --init
