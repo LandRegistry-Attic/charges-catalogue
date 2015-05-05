@@ -1,4 +1,4 @@
 test: python tests.py
 run: python run.py runserver
-install: pip install -r requirements.txt
+install: pip install -r requirements.txt; git submodule update --init
 shell: export PATH=$1; python tests.py;
