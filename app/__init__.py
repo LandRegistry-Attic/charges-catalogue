@@ -1,7 +1,6 @@
 from flask import Flask
 from flask.ext.script import Manager
-from app import api
-from govuk_template.flask import assets
+from app import helloworld
 
 
 def create_app():
@@ -9,7 +8,6 @@ def create_app():
     app.config.from_pyfile('config.py')
 
     manager = Manager(app)
-
-    static.register_assets(app)
+    app.register_blueprint(helloworld.blueprint)
 
     return app, manager

@@ -1,5 +1,5 @@
 from flask import Blueprint
-from . import routes
+from . import server
 
 blueprint = Blueprint('helloworld', __name__)
-routes.register_routes(blueprint)
+server.register_routes(blueprint)

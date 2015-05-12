@@ -1,9 +1,4 @@
 colour-runner
 xmlrunner
 Flask
-flask-stache
-lxml
 Flask-Script
-libsass
-Flask-Assets
-govuk-template
