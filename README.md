@@ -1,4 +1,3 @@
-# Borrower Frontend
+# API Skeleton
 
-The Borrower Frontend provides a website for Borrower to view and sign their
-mortgage deeds online.
+The API Skeleton provides a skeleton API for use with flask API projects.
