@@ -4,7 +4,7 @@ class catalogue (
     $host = '0.0.0.0',
     $source = 'git://github.com/LandRegistry/charges-catalogue',
     $branch_or_revision = 'puppet-config',
-    $subdomain = 'catalogue'
+    $subdomain = 'catalogue',
     $domain = 'api.*',
     $owner = 'vagrant',
     $group = 'vagrant'
