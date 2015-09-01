@@ -1,9 +1,10 @@
-# Install and configure the Flask Api Skeleton
-class api_skeleton (
-    $port = '9010',
+# Install and configure the catalogue
+class catalogue (
+    $port = '9100',
     $host = '0.0.0.0',
-    $source = 'git://github.com/LandRegistry/charges-api-skeleton',
-    $branch_or_revision = 'master',
+    $source = 'git://github.com/LandRegistry/charges-catalogue',
+    $branch_or_revision = 'puppet-config',
+    $subdomain = 'catalogue'
     $domain = 'api.*',
     $owner = 'vagrant',
     $group = 'vagrant'
