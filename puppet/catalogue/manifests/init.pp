@@ -5,7 +5,7 @@ class catalogue (
     $source = 'git://github.com/LandRegistry/charges-catalogue',
     $branch_or_revision = 'master',
     $subdomain = 'catalogue',
-    $domain = 'api.*',
+    $domain = undef,
     $owner = 'vagrant',
     $group = 'vagrant'
 ) {
@@ -64,6 +64,10 @@ class catalogue (
     owner   => $owner,
     group   => $group,
     notify  => Service['nginx'],
+  }
+
+  if $environment == 'development' {
+    standard_env::dev_host { $subdomain: }
   }
 
 }
